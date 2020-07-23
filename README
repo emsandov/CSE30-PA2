@@ -1,0 +1,97 @@
+/*
+ * Filename: README
+ * Author: Emi Sandoval
+ * UserId: cs30s120br
+ * Date: 07/22/2020
+ * Sources of help: None
+ */
+
+Description
+-----------
+	This simple program takes a string of characters as input and reads
+through the string character by character. The goal of this program is to 
+convert all the lowercase characters of the string into uppercase characters
+and print them out using putchar() after conversion, if the input character
+is not a lowercase, it is simply printed out as is using putchar().
+
+How to compile
+--------------
+	To compile this program, simply navigate to the directory containing
+the source files for PA2, and type 'gcc -g -o allcaps allcaps.s' (without the
+quotation marks).
+
+How to run
+----------
+	To run the program, simply navigate to the directory containing
+the source files for PA2, and type './allcaps' (without the quotation marks).
+
+Normal output
+-------------
+	Normal output is printed to stdout. An example of normal output would
+be the following: 
+
+120br@pi-cluster-033:~/pa2/pa2$ ./allcaps
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+
+Abnormal Output
+---------------
+	There is no abnormal output as everything is printed to stdout.
+
+Testing
+-------
+	This program was tested by manually inputing the sample test cases
+provided into the program. The strings that were tested on the executable 
+were the ones provided in the writeup and some of my own:
+	- "Hello World!"
+	- "HELLO WORLD!"
+	- "hello world!"
+	- "1234567890"
+	- "abcdefghijklmnopqrstuvwxyz"
+	- "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+	- "NUL"
+	- " "
+	- "!@#$%^&*()"
+
+Furthermore, the allcaps.s program was tested thoroughly to ensure that it 
+returns a string that has succesfully converted all its lowercase characters
+to all capitals and left the rest of the characters as they are. Test inputs
+included lowercase letters, capital letters, numbers, and symbols taken from
+the ascii table.
+
+Questions (5-7)
+---------
+
+5) Assume you have the following C code:
+
+	long nums[] = {1, 7, 13, 18};
+
+   What is another way to store the value at the second index of nums into a 
+long x other than with long x = nums[2] (Hint: think about pointer
+manipulation)?
+
+Answer:	
+	long *ptr; //declare ptr as a pointer
+	ptr = nums; //set ptr to point to the 1st element in array nums
+	long x = *(ptr + 1); //set long x to point to hold the 2nd element of
+			     //the array.
+
+6) In a terminal, from your pa2 directory, what single-line command (or chain
+of commands) would print exactly one number that indicates the number of files
+in the current directory (doesn't need to count files in subdirectories) and 
+do nothing else?
+
+Answer:	ls | wc -l
+
+
+7) What would you do to ensure integrity if you find out a major logical issue
+with the code while the deadline is in several hours?
+
+I would try to fix the logical issue on my own even if I only have a few hours
+left. If I am making no progress I would ask an autograder tutor for help.
+If there are no tutors available, I would call up a friend to answer my 
+conceptual questions but I would not ask for or accept their code as help.
+So, I would avoid copying someone else's work at all costs and do my best
+to finish on time while abiding with the academic integrity restrictions.
+
+
+
